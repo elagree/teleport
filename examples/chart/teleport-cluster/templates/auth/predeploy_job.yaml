@@ -19,7 +19,7 @@ spec:
   template:
     metadata:
       labels:
-        {{- include "teleport-cluster.labels" . | nindent 8 }}
+        {{- include "teleport-cluster.auth.labels" . | nindent 8 }}
         {{- if $auth.extraLabels.jobPod }}
         {{- toYaml $auth.extraLabels.jobPod | nindent 8 }}
         {{- end }}
