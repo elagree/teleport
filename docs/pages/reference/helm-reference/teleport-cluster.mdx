@@ -655,6 +655,63 @@ the same Kubernetes cluster or installing the CRDs on your own you should not ha
 
 ## `operator`
 
+### `operator.annotations.deployment`
+
+| Type     | Default value | `teleport.yaml` equivalent |
+|----------|---------------|----------------------------|
+| `object` | `{}`          | None                       |
+
+[Kubernetes reference](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+Kubernetes annotations which should be applied to the `Deployment` created by the chart.
+
+`values.yaml` example:
+
+  ```yaml
+    operator:
+      annotations:
+        deployment:
+          kubernetes.io/annotation: value
+  ```
+
+### `operator.annotations.pod`
+
+| Type     | Default value | `teleport.yaml` equivalent |
+|----------|---------------|----------------------------|
+| `object` | `{}`          | None                       |
+
+[Kubernetes reference](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+Kubernetes annotations which should be applied to the `Pod` created by the chart.
+
+`values.yaml` example:
+
+  ```yaml
+    operator:
+      annotations:
+        pod:
+          kubernetes.io/annotation: value
+  ```
+
+### `operator.annotations.serviceAccount`
+
+| Type     | Default value | `teleport.yaml` equivalent |
+|----------|---------------|----------------------------|
+| `object` | `{}`          | None                       |
+
+[Kubernetes reference](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+Kubernetes annotations which should be applied to the `ServiceAccount` created by the chart.
+
+`values.yaml` example:
+
+  ```yaml
+    operator:
+      annotations:
+        serviceAccount:
+          kubernetes.io/annotation: value
+  ```
+
 ### `operator.enabled`
 
 | Type   | Default value |
@@ -690,6 +747,44 @@ This setting requires [`operator.enabled`](#operatorenabled).
   ```yaml
   operator:
     image: my.docker.registry/teleport-operator-image-name
+  ```
+
+### `operator.labels.deployment`
+
+| Type     | Default value | `teleport.yaml` equivalent |
+|----------|---------------|----------------------------|
+| `object` | `{}`          | None                       |
+
+[Kubernetes reference](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+
+Kubernetes labels which should be applied to the `Deployment` created by the chart.
+
+`values.yaml` example:
+
+  ```yaml
+    operator:
+      labels:
+        deployment:
+          kubernetes.io/labels: value
+  ```
+
+### `operator.labels.pod`
+
+| Type     | Default value | `teleport.yaml` equivalent |
+|----------|---------------|----------------------------|
+| `object` | `{}`          | None                       |
+
+[Kubernetes reference](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+
+Kubernetes labels which should be applied to the `Pod` created by the chart.
+
+`values.yaml` example:
+
+  ```yaml
+    operator:
+      labels:
+        pod:
+          kubernetes.io/annotation: value
   ```
 
 ### `operator.resources`
