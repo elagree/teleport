@@ -657,9 +657,9 @@ the same Kubernetes cluster or installing the CRDs on your own you should not ha
 
 ### `operator.annotations.deployment`
 
-| Type     | Default value | `teleport.yaml` equivalent |
-|----------|---------------|----------------------------|
-| `object` | `{}`          | None                       |
+| Type     | Default value |
+|----------|---------------|
+| `object` | `{}`          |
 
 [Kubernetes reference](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
 
@@ -676,9 +676,9 @@ Kubernetes annotations which should be applied to the `Deployment` created by th
 
 ### `operator.annotations.pod`
 
-| Type     | Default value | `teleport.yaml` equivalent |
-|----------|---------------|----------------------------|
-| `object` | `{}`          | None                       |
+| Type     | Default value |
+|----------|---------------|
+| `object` | `{}`          |
 
 [Kubernetes reference](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
 
@@ -695,9 +695,9 @@ Kubernetes annotations which should be applied to the `Pod` created by the chart
 
 ### `operator.annotations.serviceAccount`
 
-| Type     | Default value | `teleport.yaml` equivalent |
-|----------|---------------|----------------------------|
-| `object` | `{}`          | None                       |
+| Type     | Default value |
+|----------|---------------|
+| `object` | `{}`          |
 
 [Kubernetes reference](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
 
@@ -751,9 +751,9 @@ This setting requires [`operator.enabled`](#operatorenabled).
 
 ### `operator.labels.deployment`
 
-| Type     | Default value | `teleport.yaml` equivalent |
-|----------|---------------|----------------------------|
-| `object` | `{}`          | None                       |
+| Type     | Default value |
+|----------|---------------|
+| `object` | `{}`          |
 
 [Kubernetes reference](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
 
@@ -765,14 +765,14 @@ Kubernetes labels which should be applied to the `Deployment` created by the cha
     operator:
       labels:
         deployment:
-          kubernetes.io/labels: value
+          label: value
   ```
 
 ### `operator.labels.pod`
 
-| Type     | Default value | `teleport.yaml` equivalent |
-|----------|---------------|----------------------------|
-| `object` | `{}`          | None                       |
+| Type     | Default value |
+|----------|---------------|
+| `object` | `{}`          |
 
 [Kubernetes reference](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
 
@@ -784,7 +784,7 @@ Kubernetes labels which should be applied to the `Pod` created by the chart.
     operator:
       labels:
         pod:
-          kubernetes.io/annotation: value
+          label: value
   ```
 
 ### `operator.resources`
